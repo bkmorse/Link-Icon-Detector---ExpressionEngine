@@ -1,0 +1,15 @@
+Use as follows:
+
+{exp:link_icon link_title="" alt_tag=""}{custom_field_url}{/exp:link_icon}
+
+link_title and alt_tag parameters are optional
+
+Detects the file extension of the URL provided and adds an icon automatically to the right of it.
+
+Works for: pdf, doc, docx, ppt, pptx, xls, xlsx, mp3, wav, txt, rss, ics, mov, mpg, mp4, avi, psd
+
+Be sure to provide the full URL:
+
+GOOD http://www.domain.com/path/to/file.doc 
+
+BAD /path/to/file.doc

@@ -139,11 +139,15 @@
 
     link_title and alt_tag parameters are optional
 
-    Detects following extensions: 
+    Detects the file extension of the URL provided and adds an icon automatically to the right of it.
 
-    pdf, doc, docx, ppt, pptx, xls, xlsx, mp3, wav, txt, rss, ics, mov, mpg, mp4, avi, psd
+    Works for: pdf, doc, docx, ppt, pptx, xls, xlsx, mp3, wav, txt, rss, ics, mov, mpg, mp4, avi, psd
 
-    If it does not recognize the extension, it still links it, just does not add an icon to the right of it.
+    Be sure to provide the full URL:
+
+    GOOD http://www.domain.com/path/to/file.doc 
+
+    BAD /path/to/file.doc
 
     <?php
     $buffer = ob_get_contents();
