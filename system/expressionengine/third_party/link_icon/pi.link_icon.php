@@ -28,11 +28,13 @@
     // make a local reference to the ExpressionEngine super object
     $this->EE =& get_instance();
     $this->EE->load->helper('url');
-    $file_url = strtolower($this->EE->TMPL->tagdata);
+    
+    $file_url_lower = strtolower($this->EE->TMPL->tagdata);     // lower case, for searching for lowercase extension
+    $file_url = $this->EE->TMPL->tagdata;                       // true URL
     $link_title = ($this->EE->TMPL->fetch_param('link_title') !== false) ? $this->EE->TMPL->fetch_param('link_title') : $file_url;
     $alt_tag = ($this->EE->TMPL->fetch_param('alt_tag') !== false) ? $this->EE->TMPL->fetch_param('alt_tag') : "Icon";
 
-    switch(pathinfo($file_url, PATHINFO_EXTENSION)) {
+    switch(pathinfo($file_url_lower, PATHINFO_EXTENSION)) {
       case "pdf":
       $icon = "pdf.png";
       break;
